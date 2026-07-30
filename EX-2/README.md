@@ -77,7 +77,7 @@ The Activity Lifecycle represents the different states an Android Activity goes 
 ---
 
 ## 📹 Demo / Recording
-*(Drag and drop your screen recording video here)*
+
 
 ---
 
