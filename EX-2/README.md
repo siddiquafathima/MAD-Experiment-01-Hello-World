@@ -1,16 +1,23 @@
-Experiment 2 — Activity Lifecycle
-Aim
+# Experiment 2 — Activity Lifecycle
 
+## 🎯 Aim
 To develop an Android application using Kotlin to understand and demonstrate the different Activity Lifecycle methods in Android.
 
-Procedure
-Create a new Android application using Android Studio and Kotlin.
-Create the main Activity and design a simple user interface.
-Override the Activity lifecycle methods such as onCreate(), onStart(), onResume(), onPause(), onStop(), and onDestroy().
-Add log messages inside each lifecycle method to identify when the method is called.
-Run the application on the Android Emulator.
-Perform actions such as opening, minimizing, and closing the application to observe the lifecycle changes.
-Main Code Block
+---
+
+## 🛠️ Procedure
+1. Create a new Android application using Android Studio and Kotlin.
+2. Create the main Activity and design a simple user interface.
+3. Override the Activity lifecycle methods such as `onCreate()`, `onStart()`, `onResume()`, `onPause()`, `onStop()`, and `onDestroy()`.
+4. Add log messages inside each lifecycle method to identify when the method is called.
+5. Run the application on the Android Emulator.
+6. Perform actions such as opening, minimizing, and closing the application to observe the lifecycle changes.
+
+---
+
+## 💻 Main Code Block
+
+```kotlin
 override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     Log.d("ActivityLifecycle", "onCreate called")
@@ -40,23 +47,35 @@ override fun onDestroy() {
     super.onDestroy()
     Log.d("ActivityLifecycle", "onDestroy called")
 }
-Explanation
+```
 
-The Activity Lifecycle represents the different states an Android Activity goes through during its lifetime. Lifecycle callback methods such as onCreate(), onStart(), onResume(), onPause(), onStop(), and onDestroy() are called at different stages of the Activity's execution. Log.d() is used to display messages in Logcat to observe the lifecycle events.
+---
 
-Wireframe / UI Design
+## 💡 Explanation
+The Activity Lifecycle represents the different states an Android Activity goes through during its lifetime. Lifecycle callback methods such as `onCreate()`, `onStart()`, `onResume()`, `onPause()`, `onStop()`, and `onDestroy()` are called at different stages of the Activity's execution. `Log.d()` is used to display messages in Logcat to observe the lifecycle events.
 
-Draw a simple mobile screen:
+---
 
+## 🎨 Wireframe / UI Design
+
+```text
 ┌─────────────────────────┐
-│   Activity Lifecycle     │
+│   Activity Lifecycle    │
 │                         │
-│   Activity Lifecycle     │
-│       Demo App           │
+│   Activity Lifecycle    │
+│       Demo App          │
 │                         │
-│   Check Logcat to view   │
-│   lifecycle events       │
+│   Check Logcat to view  │
+│   lifecycle events      │
 └─────────────────────────┘
-Result
+```
 
+---
+
+## 📹 Demo / Recording
+*(Drag and drop your screen recording video here)*
+
+---
+
+## 📊 Result
 The Android application was developed successfully using Kotlin to demonstrate the Activity Lifecycle methods. The lifecycle events were observed using Logcat.
