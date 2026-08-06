@@ -1,3 +1,6 @@
+<img width="1920" height="1200" alt="Screenshot 2026-08-06 223847" src="https://github.com/user-attachments/assets/1efca23e-5b22-434b-88b4-2f034e8ed067" />
+<img width="1920" height="1200" alt="Screenshot 2026-08-06 223752" src="https://github.com/user-attachments/assets/e938691f-70cd-45d7-b439-461f253e6515" />
+<img width="1920" height="1200" alt="Screenshot 2026-08-06 223546" src="https://github.com/user-attachments/assets/e0d149e5-e50c-4c99-88b1-74ddb5f13419" />
 Experiment 3: Fragments and Debugging in Android
 Aim
 To develop an Android application that uses Fragments to create a flexible user interface. The application contains two fragments:
