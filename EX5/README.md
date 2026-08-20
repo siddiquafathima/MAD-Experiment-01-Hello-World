@@ -1,3 +1,5 @@
+<img width="1920" height="1200" alt="login_screen" src="https://github.com/user-attachments/assets/e1ba659c-bf62-4732-96eb-bb9ed09b575f" />
+<img width="1920" height="1200" alt="Screenshot 2026-08-06 223546" src="https://github.com/user-attachments/assets/ca0d171e-f736-42ff-98c9-4220a386bf57" />
 # MAD Experiment: Login Intent and Notification
 
 Mobile Application Development Lab experiment demonstrating explicit screen navigation using Intents and status bar alerts via NotificationManager in Kotlin.
