@@ -1,4 +1,3 @@
-
 # MAD Experiment: Login Intent and Notification
 
 Mobile Application Development Lab experiment demonstrating explicit screen navigation using Intents and status bar alerts via NotificationManager in Kotlin.
@@ -101,28 +100,3 @@ class MainActivity : AppCompatActivity() {
         manager.notify(1, builder.build())
     }
 }
-<manifest xmlns:android="[http://schemas.android.com/apk/res/android](http://schemas.android.com/apk/res/android)"
-    package="com.example.loginintentnotification">
-
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-
-    <application ...>
-        <activity android:name=".MainActivity" android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".SecondActivity" />
-    </application>
-</manifest>
-# MAD Experiment: Login Intent and Notification
-
-Mobile Application Development Lab experiment demonstrating Intents and Status Bar Notifications using Kotlin.
-
-<img width="1920" height="1200" alt="notification_screen"
-<img width="1920" height="1200" alt="login_screen" 
-
-Result
-The Android application was successfully developed and tested. Upon clicking the login button, the app navigates from MainActivity to SecondActivity using an Intent, while generating a status bar notification displaying the login event.<img width="1920" height="1200" alt="notification_screen" src="https://github.com/user-attachments/assets/7892e01c-2a9c-45a8-918d-c13323628364" />
-<img width="1920" height="1200" alt="login_screen" src="https://github.com/user-attachments/assets/bfa92ad8-e247-4fe2-8ce3-896a29ef2172" />
