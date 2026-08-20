@@ -120,8 +120,8 @@ class MainActivity : AppCompatActivity() {
 
 Mobile Application Development Lab experiment demonstrating Intents and Status Bar Notifications using Kotlin.
 
-<img width="1920" height="1200" alt="notification_screen" src="https://github.com/user-attachments/assets/47118cb0-3140-4295-b4b4-e3f316a04862" />
-<img width="1920" height="1200" alt="login_screen" src="https://github.com/user-attachments/assets/4b5e47e3-f018-464f-bee0-b57ed7b9db14" />
+<img width="1920" height="1200" alt="notification_screen"
+<img width="1920" height="1200" alt="login_screen" 
 
 Result
 The Android application was successfully developed and tested. Upon clicking the login button, the app navigates from MainActivity to SecondActivity using an Intent, while generating a status bar notification displaying the login event.<img width="1920" height="1200" alt="notification_screen" src="https://github.com/user-attachments/assets/7892e01c-2a9c-45a8-918d-c13323628364" />
