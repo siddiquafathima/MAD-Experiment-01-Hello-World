@@ -85,8 +85,8 @@ class MenuActivity : AppCompatActivity() {
 }<img width="218" height="421" alt="Screenshot 2026-09-10 111923" src="https://github.com/user-attachments/assets/509f181d-afe9-4f14-a8ca-ed81f4986a9c" />
 <img width="221" height="488" alt="Screenshot 2026-09-10 111908" src="https://github.com/user-attachments/assets/4274abe4-d465-4887-b178-ab2f3e20c090" />
 <img width="227" height="427" alt="Screenshot 2026-09-10 111857" src="https://github.com/user-attachments/assets/49843f93-087d-4cd7-8560-b70face4eb93" />
-
-ConfirmationActivity.kt
+---
+##ConfirmationActivity.kt
 package com.example.foodiecafe
 
 import android.app.NotificationChannel
@@ -163,8 +163,9 @@ class ConfirmationActivity : AppCompatActivity() {
     override fun onStop() { super.onStop(); Log.d(tag, "onStop called") }
     override fun onDestroy() { super.onDestroy(); Log.d(tag, "onDestroy called") }
 }
-
-Screenshots
+----
+----
+##Screenshots
 1. Home Screen
 
 
@@ -173,6 +174,8 @@ Screenshots
 
 3. Order Confirmation & Notification Output
 
+-----
 
-Result
+##Result
 The FoodOrder campus cafeteria application was developed and executed successfully. Form selections were captured via basic UI views, passed through explicit Intents to the confirmation activity, a heads-up order notification was posted, and activity lifecycle transitions were monitored in Logcat.
+---
