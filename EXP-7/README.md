@@ -1,3 +1,5 @@
+<img width="960" height="600" alt="Screenshot 2026-09-17 111129" src="https://github.com/user-attachments/assets/b064a2c8-1e89-4fce-8000-54d09bc8ad90" />
+<img width="960" height="600" alt="Screenshot 2026-09-17 111106" src="https://github.com/user-attachments/assets/3167b292-ff45-4f34-8573-05a9ce44b0bb" />
 # MAD Experiment 07: Adaptive UI Using ListView and ImageView
 
 A Mobile Application Development lab experiment demonstrating a dynamic user interface using `ListView` and `ImageView` with a custom `ArrayAdapter` in Kotlin.
