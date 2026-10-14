@@ -1,4 +1,3 @@
-<img width="238" height="500" alt="Screenshot 2026-10-14 202933" src="https://github.com/user-attachments/assets/c6d0ca84-3bbb-4c2c-809e-1595548293eb" />
 # MAD Experiment 09: Data Persistence Using SharedPreferences and SQLite
 
 A Mobile Application Development lab experiment demonstrating local data persistence in Android using **SharedPreferences** for key-value storage and **SQLiteOpenHelper** for structured relational database operations using Kotlin.
@@ -342,11 +341,12 @@ class MainActivity : AppCompatActivity() {
 
 ### Screenshot 2: SQLite Record Insertion
 
-Add a screenshot showing a successfully inserted course record with the student details.
+<img width="247" height="459" alt="Screenshot 2026-10-14 203718" src="https://github.com/user-attachments/assets/67f71db8-db01-4b39-8437-430e7f89db8e" />
+
 
 ### Screenshot 3: SQLite View and Clear Operations
 
-Add a screenshot showing the records before clearing and the empty database state after clearing.
+<img width="238" height="500" alt="Screenshot 2026-10-14 202933" src="https://github.com/user-attachments/assets/c6d0ca84-3bbb-4c2c-809e-1595548293eb" />
 
 ---
 
