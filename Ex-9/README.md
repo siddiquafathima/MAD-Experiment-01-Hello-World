@@ -1,3 +1,4 @@
+<img width="238" height="500" alt="Screenshot 2026-10-14 202933" src="https://github.com/user-attachments/assets/c6d0ca84-3bbb-4c2c-809e-1595548293eb" />
 # MAD Experiment 09: Data Persistence Using SharedPreferences and SQLite
 
 A Mobile Application Development lab experiment demonstrating local data persistence in Android using **SharedPreferences** for key-value storage and **SQLiteOpenHelper** for structured relational database operations using Kotlin.
