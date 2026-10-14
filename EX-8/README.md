@@ -99,14 +99,6 @@ If external URLs fail to resolve in the Android Emulator (`net::ERR_NAME_NOT_RES
 4. Press **`Shift + F10`** or click the green **Run** button.
 
 ## images
-![Screenshot 2026-09-24 130112.png](images/Screenshot%202026-09-24%20130112.png)
-![Screenshot 2026-09-24 130123.png](images/Screenshot%202026-09-24%20130123.png)
-![Screenshot 2026-09-24 130150.png](images/Screenshot%202026-09-24%20130150.png)
-![Screenshot 2026-09-24 130219.png](images/Screenshot%202026-09-24%20130219.png)
-![Screenshot 2026-09-24 130229.png](images/Screenshot%202026-09-24%20130229.png)
-![Screenshot 2026-09-24 130238.png](images/Screenshot%202026-09-24%20130238.png)<img width="519" height="946" alt="WhatsApp Image 2026-09-24 at 13 10 50 (1)" src="https://github.com/user-attachments/assets/d2da7830-bc33-4124-81b0-7e19c1e4d337" />
-<img width="510" height="970" alt="WhatsApp Image 2026-09-24 at 13 10 49" src="https://github.com/user-attachments/assets/e1503d59-1615-40e0-85d9-4a9f26d42128" />
-<img width="515" height="948" alt="WhatsApp Image 2026-09-24 at 13 10 49 (1)" src="https://github.com/user-attachments/assets/0022ebc9-c367-478c-a703-cca644627198" />
-<img width="452" height="914" alt="WhatsApp Image 2026-09-24 at 13 10 51" src="https://github.com/user-attachments/assets/8ee18918-f3b1-4e8d-b647-dc755d16aa36" />
-<img width="536" height="954" alt="WhatsApp Image 2026-09-24 at 13 10 50" src="https://github.com/user-attachments/assets/4f196ccc-c064-49e9-b0b7-a5ad2e7dbb71" />
-<img width="487" height="861" alt="WhatsApp Image 2026-09-24 at 13 10 50 (2)" src="https://github.com/user-attachments/assets/5e1c0fe9-a3a7-45e8-a4a3-6d2c859adf19" />
+<img width="331" height="490" alt="Screenshot 2026-10-14 200842" src="https://github.com/user-attachments/assets/7a2a5270-fca6-48f8-a239-faf87a0ac388" />
+<img width="326" height="487" alt="Screenshot 2026-10-14 200828" src="https://github.com/user-attachments/assets/19aa8165-4c4e-4991-9ec5-56477312d0a9" />
+<img width="329" height="478" alt="Screenshot 2026-10-14 200854" src="https://github.com/user-attachments/assets/6aae283e-092f-4c7e-b682-d9216b437606" />
