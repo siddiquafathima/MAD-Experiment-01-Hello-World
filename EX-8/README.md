@@ -1,104 +1,216 @@
-# EXP8 - Web & Media Explorer 📱🌐🖼️
+# MAD Experiment 08: Implementing Options Menu and WebView in Android
 
-A modern Android application built with **Kotlin** and **Material Design 3**, demonstrating a multi-fragment architecture featuring an **In-App Web Browser** with offline HTML support and a **Multi-Source Image Gallery Grid** with local photo picker integration and card selection capabilities.
-
----
-
-## 🌟 Key Features
-
-### 1. 🌐 Web View Fragment (`WebViewFragment`)
-- **Full-Screen Web Browsing**: In-app web rendering with JavaScript execution enabled.
-- **Visual Progress Indicator**: Material 3 `LinearProgressIndicator` showing real-time loading progress (`0% - 100%`).
-- **Pull-To-Refresh**: Integrated `SwipeRefreshLayout` allowing users to swipe down to reload any webpage.
-- **Bookmarks & Fast Shortcuts**: Pre-configured menu options for Google, Wikipedia, YouTube, and GitHub.
-- **Local Offline HTML Fallback**: Built-in responsive HTML page (`assets/sample.html`) that allows offline web view testing without requiring an active internet connection.
+A Mobile Application Development lab experiment demonstrating Android Options Menus and an embedded browser using `WebView` and `WebViewClient` in Kotlin.
 
 ---
 
-### 2. 🖼️ Multi-Source Image Grid Fragment (`ImageGridFragment`)
-Displays a 2-column `RecyclerView` grid showcasing images loaded from **3 distinct channels**:
-1. **Drawable Resources** (`1. DRAWABLE`): Vector graphics loaded directly from app resources (`R.drawable`).
-2. **Local Device Storage** (`2. LOCAL`): PNG images stored in internal app storage (`context.filesDir`). Tapping "Pick Photo from Device" or "Edit" launches the native **Android Photo Picker** (`ActivityResultContracts.GetContent()`) to pick any photo from the device gallery.
-3. **Network URLs / Web URIs** (`3. URL/URI`): Online web images rendered using **Glide** with automatic disk caching and fallback placeholders.
+## 1. Aim
+
+To develop an Android application using Kotlin that implements an Options Menu and displays web pages within the application using WebView.
+
+## 2. Concept and Technology Overview
+
+- **Options Menu:** Displays menu items that allow users to perform actions within an Android application.
+- **WebView:** Displays web pages inside the application without opening an external browser.
+- **WebViewClient:** Handles web navigation within the WebView.
+- **Menu Inflation:** Uses `onCreateOptionsMenu()` to display menu items defined in an XML resource.
+- **Menu Selection:** Uses `onOptionsItemSelected()` to handle user selections.
+- **Reload:** Refreshes the currently displayed webpage.
+- **Toast:** Displays short messages to provide feedback to the user.
+
+### Scenario
+
+The application acts as a simple academic web portal browser. Users can open Google and GitHub, reload the current webpage, and view student information through the Options Menu.
 
 ---
 
-### 3. 🎯 Selection & Menu Capabilities
+## 3. Project File and Folder Structure
 
-- **Card Selection ("Select All")**:
-  - Clicking **"Select All"** (via the Toolbar OptionsMenu or Item PopupMenu) highlights all image cards in the grid simultaneously.
-  - Selected cards feature a **thick green stroke border** (`#10B981`) and a **checkmark badge icon** (`ic_check_circle`).
-  - Tapping individual cards toggles their selection state.
-
-- **PopupMenu**:
-  - Triggered on each grid card's 3-dots overflow button or via long press.
-  - Actions: **Pick Photo from Device**, **Select All**, **Edit**, and **Share**.
-
-- **Toolbar OptionsMenu**:
-  - Contains **Back**, **Forward**, and **Refresh** quick action icons.
-  - Nested **Bookmarks** sub-menu (Google, Wikipedia, YouTube, GitHub, Local HTML).
-  - Main actions (**Select All**, **Edit**, **Share**) and **Emulator DNS Info** dialog.
-
-- **Bottom Navigation**:
-  - `BottomNavigationView` for seamless tab switching between **Web View** and **Image Grid**.
-
----
-
-## 🛠️ Tech Stack & Dependencies
-
-- **Language**: Kotlin
-- **Min SDK**: 24 (Android 7.0) | **Target SDK**: 36 | **Compile SDK**: 37
-- **Architecture**: Single Activity (`MainActivity`) with multi-fragment hosting (`WebViewFragment`, `ImageGridFragment`).
-- **UI Framework**: Material Design 3, ConstraintLayout, CoordinatorLayout, RecyclerView, MaterialCardView, SwipeRefreshLayout.
-- **Image Engine**: [Glide 4.16.0](https://github.com/bumptech/github/glide) for asynchronous image loading and caching.
-- **Asset Management**: Android Assets (`src/main/assets/sample.html`) and Vector Drawables.
-
----
-
-## 📁 Project Structure
-
-```
-EXP8/
+```text
+MenusWebViewApp/
 ├── app/
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── assets/
-│   │   │   │   └── sample.html              # Local offline HTML webpage
-│   │   │   ├── java/com/example/exp8/
-│   │   │   │   ├── MainActivity.kt          # Host Activity & Bottom Navigation Controller
-│   │   │   │   ├── WebViewFragment.kt       # Fragment handling WebView & browser logic
-│   │   │   │   ├── ImageGridFragment.kt     # Fragment handling multi-source image gallery
-│   │   │   │   ├── ImageAdapter.kt          # Grid RecyclerView Adapter & PopupMenu handler
-│   │   │   │   └── ImageItem.kt             # Data model for image sources and selection state
-│   │   │   └── res/
-│   │   │       ├── drawable/                # Custom vector drawables & icons
-│   │   │       ├── layout/                  # Activity, Fragment, and Grid item layouts
-│   │   │       ├── menu/                    # OptionsMenu, PopupMenu & BottomNav menus
-│   │   │       └── values/                  # Material 3 colors, themes & string resources
-│   └── build.gradle.kts                     # Module build configurations & dependencies
+│   ├── manifests/
+│   │   └── AndroidManifest.xml
+│   ├── java/
+│   │   └── com/example/menuswebviewapp/
+│   │       └── MainActivity.kt
+│   └── res/
+│       ├── layout/
+│       │   └── activity_main.xml
+│       └── menu/
+│           └── main_menu.xml
+├── build.gradle.kts
 └── README.md
 ```
 
----
+### File Description
 
-## 🔧 Troubleshooting & Emulator DNS Setup
-
-If external URLs fail to resolve in the Android Emulator (`net::ERR_NAME_NOT_RESOLVED`):
-1. Open Emulator **Extended Controls** (`...` icon on emulator toolbar).
-2. Go to **Settings** $\rightarrow$ **Network**.
-3. Set **DNS Servers** to `8.8.8.8` or `8.8.4.4`.
-4. Alternatively, use the **"Local HTML (Offline)"** option in the Bookmarks menu to test web rendering offline!
+- `MainActivity.kt` — Handles menu actions and WebView navigation.
+- `activity_main.xml` — Defines the student information header and WebView.
+- `main_menu.xml` — Defines the Options Menu items.
+- `AndroidManifest.xml` — Declares the required Internet permission and application configuration.
 
 ---
 
-## 🚀 How to Run
+## 4. Main Source Code
 
-1. Open the project in **Android Studio**.
-2. Synchronize Gradle files (`File` $\rightarrow$ `Sync Project with Gradle Files`).
-3. Select an Android Virtual Device (AVD) or connected hardware device.
-4. Press **`Shift + F10`** or click the green **Run** button.
+### MainActivity.kt
 
-## images
-<img width="331" height="490" alt="Screenshot 2026-10-14 200842" src="https://github.com/user-attachments/assets/7a2a5270-fca6-48f8-a239-faf87a0ac388" />
-<img width="326" height="487" alt="Screenshot 2026-10-14 200828" src="https://github.com/user-attachments/assets/19aa8165-4c4e-4991-9ec5-56477312d0a9" />
-<img width="329" height="478" alt="Screenshot 2026-10-14 200854" src="https://github.com/user-attachments/assets/6aae283e-092f-4c7e-b682-d9216b437606" />
+```kotlin
+package com.example.menuswebviewapp
+
+import android.annotation.SuppressLint
+import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.webkit.WebView
+import android.webkit.WebViewClient
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var webView: WebView
+
+    @SuppressLint("SetJavaScriptEnabled")
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val tvStudentUSN = findViewById<TextView>(R.id.tvStudentUSN)
+        tvStudentUSN.text = "USN: 25MCAR0121"
+
+        webView = findViewById(R.id.webView)
+        webView.settings.javaScriptEnabled = true
+        webView.webViewClient = WebViewClient()
+        webView.loadUrl("https://www.google.com")
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.menu_student_info -> {
+                val studentInfo =
+                    "Name: Siddiqua Fathima | USN: 25MCAR0121"
+
+                Toast.makeText(
+                    this,
+                    studentInfo,
+                    Toast.LENGTH_LONG
+                ).show()
+                true
+            }
+
+            R.id.menu_google -> {
+                webView.loadUrl("https://www.google.com")
+                Toast.makeText(
+                    this,
+                    "Navigating to Google",
+                    Toast.LENGTH_SHORT
+                ).show()
+                true
+            }
+
+            R.id.menu_github -> {
+                webView.loadUrl("https://github.com")
+                Toast.makeText(
+                    this,
+                    "Navigating to GitHub",
+                    Toast.LENGTH_SHORT
+                ).show()
+                true
+            }
+
+            R.id.menu_reload -> {
+                webView.reload()
+                Toast.makeText(
+                    this,
+                    "Reloading Page...",
+                    Toast.LENGTH_SHORT
+                ).show()
+                true
+            }
+
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun onBackPressed() {
+        if (webView.canGoBack()) {
+            webView.goBack()
+        } else {
+            super.onBackPressed()
+        }
+    }
+}
+```
+
+**Important:** The code above assumes the IDs in your XML files match those used in the Kotlin code. Keep your actual student USN consistent throughout your project.
+
+---
+
+## 5. Internet Permission
+
+Ensure that `AndroidManifest.xml` contains the Internet permission before the `<application>` element:
+
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
+This permission allows the WebView to access online webpages.
+
+---
+
+## 6. Test Cases and Execution Verification
+
+### Test Case 1: Student Information
+
+**Action:** Launch the application, open the three-dot Options Menu, and select **Student Info**.
+
+**Expected Output:** A Toast displays the student's name and USN. The student verification header remains visible in the application.
+
+**Screenshot 1:** Student information and Toast message.
+
+### Test Case 2: WebView Navigation
+
+**Action:** Open the Options Menu and select **GitHub**.
+
+**Expected Output:** GitHub loads inside the application's WebView without redirecting to an external browser.
+
+**Screenshot 2:** GitHub displayed inside the application.
+
+### Test Case 3: Reload Webpage
+
+**Action:** Open the Options Menu and select **Reload**.
+
+**Expected Output:** The current webpage refreshes, and a Toast displays `Reloading Page...`.
+
+**Screenshot 3:** Reload action and its Toast message.
+
+---
+
+## 7. Output Screenshots
+
+### Screenshot 1: Student Information
+
+![Student Information and Toast](https://github.com/user-attachments/assets/7a2a5270-fca6-48f8-a239-faf87a0ac388)
+
+### Screenshot 2: WebView Navigation
+
+![GitHub displayed in WebView](https://github.com/user-attachments/assets/19aa8165-4c4e-4991-9ec5-56477312d0a9)
+
+### Screenshot 3: Reload Functionality
+
+![WebView reload action](https://github.com/user-attachments/assets/6aae283e-092f-4c7e-b682-d9216b437606)
+
+---
+
+## 8. Result
+
+The Android application demonstrating Options Menu handling and WebView integration was developed using Kotlin. The application supports webpage navigation, page reloading, and student information display through menu actions. The functionality was verified using the specified test cases.
